@@ -1,6 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: my-app
-spec:
-  replicas: 3
+  - op: add
+    path: "/template/spec/containers/0/env"
+    value:
+      - name: LOG_LEVEL
+        value: debug
